@@ -87,19 +87,19 @@
                     <a href="http://www.aruncomputers.in">Arun Computers</a>
                 </li>
                 <li>
-                    <a href="index.php?s=home"><i class="fa fa-home"></i> Home</a>
+                    <a href="index.php#home"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li>
-                    <a href="index.php?s=about"><i class="fa fa-list-alt"></i> About</a>
+                    <a href="index.php#about"><i class="fa fa-list-alt"></i> About</a>
                 </li>
                 <li>
-                    <a href="index.php?s=services">Services</a>
+                    <a href="index.php#services">Services</a>
                 </li>
                 <li>
-                    <a href="index.php?s=physics">Physics Simplified</a>
+                    <a href="index.php#physics">Physics Simplified</a>
                 </li>
                 <li>
-                    <a href="index.php?s=contact"><i class="fa fa-phone"></i> Contact</a>
+                    <a href="index.php#contact"><i class="fa fa-phone"></i> Contact</a>
                 </li>
             </ul>
         </nav>
