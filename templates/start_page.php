@@ -109,20 +109,41 @@
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">
                         <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            <a href="form.php" class="btn btn-success btn-lg">
+                            	<i class="fa fa-pencil"></i> <span class="network-name">Register</span>
+                            </a>
                         </li>
                     </ul>
-                </div>
+                    <p class="text-right" style="clear: both;">Register Online and avail discount on the course fee!</p>
+	            </div>
+            </div>
+
+            <div class="row"><address>
+            	<h4>Address</h4>
+            	<ul class="list-unstyled address">
+                    <li>
+                        <i class="fa fa-home"></i> 
+                        <strong>Address:</strong>1212, Arun Computers, <br>
+                        					   Allahabad Road , Urrhat <br>
+                        					   Rewa (M.P.) 486001
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope-o"></i> 
+                        <strong>Email: </strong> aruncomputersrewa@gmail.com
+                    </li>
+                    <li>
+                        <i class="fa fa-globe"></i> 
+                        <strong>Website:</strong> <a href="http:/www.aruncomputers.in" style="color: white;">www.aruncomputers.in</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i> 
+                        <strong>Mobile :</strong> 9926542408, 9993403228
+                    </li>
+                </ul></address>
             </div>
 
         </div>
         <!-- /.container -->
 
     </div>
-    <!-- /.banner -->
+    <!-- /.banner
