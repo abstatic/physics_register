@@ -21,3 +21,6 @@
 
 #Ignore the maps
 *.map
+
+#Ignore the landing
+/landing/
