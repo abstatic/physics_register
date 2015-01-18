@@ -1,0 +1,23 @@
+# Exclude all the image files
+*.jpg
+*.jpeg
+*.gif
+*.png
+*.PSD
+*.psd
+*.bmp
+
+#Ignore the fonts
+/html/fonts
+/html/fonts/*
+/html/font-awesome/*
+/html/font-awesome
+
+#Ignore the image folders
+/images/
+/html/img/
+/html/images/
+/css/images/
+
+#Ignore the maps
+*.map
