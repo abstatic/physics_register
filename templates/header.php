@@ -12,12 +12,12 @@
         <meta name="author"                content="Abhishek Shrivastava" />
 
         <!-- Link all the css -->
-        <link rel="stylesheet" href="css/bootstrap.css" />
-        <link rel="stylesheet" href="css/bootstrap-theme.css" />
-        <link rel="stylesheet" href="css/jquery-ui.min.css">
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/print.css" media="print" type="text/css" />
-        <link rel="stylesheet" href="css/landing-page.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/print.css" media="print" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/landing-page.css">
      
         <!-- Custom Fonts -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -87,19 +87,19 @@
                     <a href="http://www.aruncomputers.in">Arun Computers</a>
                 </li>
                 <li>
-                    <a href="#top">Home</a>
+                    <a href="index.php?s=home"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li>
-                    <a href="#about">About</a>
+                    <a href="index.php?s=about"><i class="fa fa-list-alt"></i> About</a>
                 </li>
                 <li>
-                    <a href="#services">Services</a>
+                    <a href="index.php?s=services">Services</a>
                 </li>
                 <li>
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="index.php?s=physics">Physics Simplified</a>
                 </li>
                 <li>
-                    <a href="#contact">Contact</a>
+                    <a href="index.php?s=contact"><i class="fa fa-phone"></i> Contact</a>
                 </li>
             </ul>
         </nav>

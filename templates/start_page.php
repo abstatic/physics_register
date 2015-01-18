@@ -1,5 +1,5 @@
 <!-- Header -->
-    <div class="intro-header">
+    <div class="intro-header" id="home">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -27,7 +27,7 @@
     <!-- /.intro-header -->
 
     <!-- Page Content -->
-    <div class="content-section-a">
+    <div class="content-section-a" id="about">
 
         <div class="container">
 
@@ -36,8 +36,15 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">JEE + School Preparation:<br>All at same place</h2>
-                    <p class="lead">With our unique course and strategy we ensure that you excel at both fronts, school as
+                    <p class="lead">Our unique course and strategy we ensure that you excel at both fronts, school as
                     well as competitive exams.</p>
+					<p class="lead">
+						With over 20 years of expertise in field of physics and engineering education we are familiar with the
+						expected questions and patters asked in exams.
+                    </p>
+                    <p class="lead">
+                    	We focus mentoring on both fronts JEE as well as school curriculum.
+                    </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/ipad.png" alt="">
@@ -76,7 +83,7 @@
     </div>
     <!-- /.content-section-b -->
 
-    <div class="content-section-a">
+    <div class="content-section-a" id="physics">
 
         <div class="container">
 
@@ -84,8 +91,15 @@
                 <div class="col-lg-5 col-sm-6">
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
+                    <h2 class="section-heading">Physics-<br>Simplified</h2>
+                    <p class="lead">
+                    	Physics is a subject that haunts almost all of the students. It is regarded as one of the most difficult
+                    	subjects and students flinch by even thinking about it. But, truthe be told its one of the easiest &
+                    	logical subjects if you get the concepts right.
+                    </p>
+                    <p class="lead">
+                    	
+                    </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/phones.png" alt="">
@@ -104,7 +118,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>Contact Us</h2>
+                    <h2>Contact Us-</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">

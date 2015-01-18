@@ -43,18 +43,18 @@ h6 {
 
 .intro-message > h1 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 3px #000;
     font-size: 5em;
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px #000;
 }
 
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-.intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
 @media(max-width:767px) {
@@ -224,12 +224,6 @@ a {
 .btn-light:active {
     color: #333;
     background-color: rgba(255,255,255,0.8);
-}
-
-/* Custom Horizontal Rule */
-
-hr.small {
-    max-width: 100px;
 }
 
 /* Side Menu */
