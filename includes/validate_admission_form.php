@@ -43,7 +43,6 @@
 			if (!ctype_digit($mob) OR strlen($mob) != 10) 
             	apologize("Ivalid Mobile Number");
 
-	
 			# validation for address
 			$aValid = array('-', '\\', '/', '.', ',' , '(', ')', ' ');
 			if (!ctype_alnum(str_replace($aValid, '', $address)))
@@ -52,6 +51,16 @@
 			# validation for 10th marks
 			if ($marks_10 < 0.0 && $_marks > 100.00)
 				apologize("Enter marks in correct form.");
+
+			# validation for class
+			if ($class < 11 OR $class > 12)
+				apologize("Invalid Class");
+
+			# validation for school
+			if (!ctype_alnum(str_replace($aValid, '', $school)))
+				apologize("Invalid school name. Don't use special characters.");
+
+
 			// print($course."<br>");
 			// print($first_name."<br>");
 			// print($last_name."<br>");	

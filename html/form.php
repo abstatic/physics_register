@@ -35,7 +35,11 @@
 
 		$stream      = $_SESSION["myForm"]["stream"];
 		$marks_10    = $_SESSION["myForm"]["marks_10"];
+		$class       = $_SESSION["myForm"]["class"];
+		$school      = $_SESSION["myForm"]["school"];
 
+		// create a unique serial
+		$_SESSION["myForm"]["serial"] = $serial = "phy".time();
 		// now move the image file
 		if (rename($photo_path, $newpath)) 
 		{
@@ -43,15 +47,17 @@
 			/** Allright, if we have come upto here then, it means form validation was successful 
 			 *	  So, lets prepare the mysql query.
 			 */
-			$rows = query("INSERT INTO form (course, first_name, last_name, father_name, 
-					mother_name, email, dob, mob, gender, category, address, images_path, stream, marks_10)
-					 VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $course, $first_name, $last_name, 
-					 $father_name, $mother_name, $email, $dob, $mob, $gender, $category, $address, $newpath, $stream, $marks_10);
+
+			$rows = query("INSERT INTO form (srial, course, first_name, last_name, father_name, 
+					mother_name, email, dob, mob, gender, category, address, images_path, stream, marks_10, class, school)
+					 VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", $serial, $course, $first_name, $last_name, 
+					 $father_name, $mother_name, $email, $dob, $mob, $gender, $category, $address, $newpath, $stream, $marks_10,
+					 $class, $school);
 
 			if ($rows === false)
 				apologize("DB ERROR");
 			else {
-
+			
 				render("success_page.php", ["title" => "Print Form"]);
 			}
 		}// end if rename
@@ -60,11 +66,12 @@
 	// This is the step after the first next on form. We are validating. After this we will do the final submit.
 	else // Form preview state. Preview validation
 	{
-		$condition1 = !empty($_POST["course"])   && !empty($_POST["f_name"])  && !empty($_POST["l_name"])
-    			   && !empty($_POST["fr_name"])  && !empty($_POST["mr_name"]) && !empty($_POST["email"])
-		           && !empty($_POST["dob"])      && !empty($_POST["mob"])     && !empty($_POST["gender"])
-		           && !empty($_POST["category"]) && !empty($_POST["address"]) && !empty($_FILES)
-		           && !empty($_POST["stream"])   && !empty($_POST["marks_10"]);
+		$condition1 = !empty($_POST["course"])   && !empty($_POST["f_name"])   && !empty($_POST["l_name"])
+    			   && !empty($_POST["fr_name"])  && !empty($_POST["mr_name"])  && !empty($_POST["email"])
+		           && !empty($_POST["dob"])      && !empty($_POST["mob"])      && !empty($_POST["gender"])
+		           && !empty($_POST["category"]) && !empty($_POST["address"])  && !empty($_FILES)
+		           && !empty($_POST["stream"])   && !empty($_POST["marks_10"]) && !empty($_POST["class"])
+		           && !empty($_POST["school"]);
 
 		// Validate The Form. Preview state.
         // Checking if all the input was entered.
@@ -84,6 +91,8 @@
 			$_SESSION["myForm"]["address"]  = $address     = strtoupper(htmlspecialchars(trim($_POST["address"])));
 			$_SESSION["myForm"]["stream"]   = $stream      = strtoupper(htmlspecialchars(trim($_POST["stream"])));
 			$_SESSION["myForm"]["marks_10"] = $marks_10    = htmlspecialchars(trim($_POST["marks_10"]));
+			$_SESSION["myForm"]["class"]    = $class       = htmlspecialchars(trim($_POST["class"]));
+			$_SESSION["myForm"]["school"]   = $school      = strtoupper(htmlspecialchars(trim($_POST["school"])));
 
 			/**** Photo Handling ****/
 			$file_name   = $_FILES["photo"]["name"];
@@ -98,12 +107,9 @@
 			// this script handles the form validation. If anything goes wrong, apologize
 			require("../includes/validate_admission_form.php");
 
-			// Lets handle the preview
+			// Validation went well, so Lets handle the preview
 			if (isset($_POST["preview"]) && ($_POST["preview"] == true))
 			{	
-				// Store the form data into POST ? Or are we storing it into session ? 
-				//$_SESSION["myForm"] = $_POST;
-
 				// Store the photo into a TEMPORARY FOLDER
 				if (move_uploaded_file($temp_name, $temp_path)) {
 					img_resize($imagename);

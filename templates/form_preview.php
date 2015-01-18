@@ -1,7 +1,7 @@
-<div id="top">
-            <span class="head"><?= isset($title) ? htmlspecialchars($title) : 'Arun Computers' ?></span>
-</div>
-<div class="container-fluid  col-md-12">
+<div class="container-fluid">
+	<div class="row" id="top">
+		<span class="head"><?= isset($title) ? htmlspecialchars($title) : 'Arun Computers' ?></span>
+	</div>
 	<hr>
 	<div class="well row">
 	
@@ -20,37 +20,37 @@
 				<div class="form-group row">
 					<label for="fn" class="control-label col-md-2">First Name:</label>
 					<div class="col-md-2" >
-						<input class="form-control" name="f_name" id="fn" type="text" placeholder="First Name"  value=<?=$_SESSION["myForm"]["f_name"]?>>
+						<input class="form-control" name="f_name" id="fn" type="text" value=<?=$_SESSION["myForm"]["f_name"]?>>
 					</div>
 					<label for="ln" class="control-label col-md-2">Last Name:</label>
 					<div class="col-md-2">
-						<input class="form-control" name="l_name" id="ln" type="text" placeholder="Last Name"   value=<?=$_SESSION["myForm"]["l_name"]?>>
+						<input class="form-control" name="l_name" id="ln" type="text" value=<?=$_SESSION["myForm"]["l_name"]?>>
 					</div>
 				</div>
 
 				<div class="form-group row">
 					<label for="fr_name" class="control-label col-md-2" >Father's Name:</label>
 					<div class="col-md-2">
-						<input id="fr_name" type="text" class="form-control" name="fr_name" placeholder="Father's Name" value=<?php echo '"'.$_SESSION["myForm"]["fr_name"].'"';?>>
+						<input id="fr_name" type="text" class="form-control" name="fr_name" value=<?php echo '"'.$_SESSION["myForm"]["fr_name"].'"';?>>
 					</div>
 					<label for="mr_name" class="control-label col-md-2" >Mother's Name:</label>
 					<div class="col-md-2">
-						<input id="mr_name" type="text" class="form-control" name="mr_name" placeholder="Mother's Name" value=<?php echo '"'.$_SESSION["myForm"]["mr_name"].'"';?>>
+						<input id="mr_name" type="text" class="form-control" name="mr_name" value=<?php echo '"'.$_SESSION["myForm"]["mr_name"].'"';?>>
 					</div>
 					<label for="em" class="control-label col-md-2">E-Mail:</label>
 					<div class="col-md-2">
-						<input type="text" id="em" class="form-control" name="email" placeholder="E-Mail" value=<?=$_SESSION["myForm"]["email"]?>>
+						<input type="text" id="em" class="form-control" name="email" value=<?=$_SESSION["myForm"]["email"]?>>
 					</div>
 				</div>
 
 				<div class="form-group row">
 					<label for="datepicker" class="control-label col-md-2">Date Of Birth:</label>
 					<div class="col-md-2">
-						<input class="form-control" type="text" name="dob" id="datepicker" placeholder="Pick You Birth Date" value=<?=$_SESSION["myForm"]["dob"]?>>
+						<input class="form-control" type="text" name="dob" id="datepicker" value=<?=$_SESSION["myForm"]["dob"]?>>
 					</div>
 					<label for="mb" class="control-label col-md-2">Mobile Number:</label>
 					<div class="col-md-2">
-						<input id="mb" type="text" class="form-control" id="mb" name="mob" placeholder="Contact Number"      value=<?=$_SESSION["myForm"]["mob"]?>>
+						<input id="mb" type="text" class="form-control" id="mb" name="mob" value=<?=$_SESSION["myForm"]["mob"]?>>
 					</div>
 				</div>
 
@@ -85,12 +85,25 @@
 							<input type="radio" value="OBC" id="obc" name="category" <?php if($_SESSION["myForm"]["category"] === "OBC") echo "checked"?>> OBC
 						</label>
 					</div>
+					<label for="" class="control-label col-md-1">Stream: </label>
+					<div class="col-md-2">
+						<label for="maths" class="radio-inline">
+							<input type="radio" value="MATHS" id="maths" name="stream" <?php if($_SESSION["myForm"]["stream"] == "MATHS") echo "checked"?>>Maths
+						</label>
+						<label for="science" class="radio-inline">
+							<input type="radio" value="SCIENCE" id="science" name="stream" <?php if($_SESSION["myForm"]["stream"] == "SCIENCE") echo "checked"?>>Science
+						</label>
+					</div>
 				</div>
 
 				<div class="form-group row">
 					<label for="add" class="control-label col-md-2">Address:</label>
 					<div class="col-md-6">
-						<textarea name="address" id="add" cols="6" rows="1" class="form-control" placeholder="Enter Your Post Address"><?=$_SESSION["myForm"]["address"]?></textarea>
+						<textarea name="address" id="add" cols="6" rows="1" class="form-control"><?=$_SESSION["myForm"]["address"]?></textarea>
+					</div>
+					<label for="school" class="control-label col-md-2">School:</label>
+					<div class="col-md-2">
+						<input class="form-control" name="school" id="school" type="text" value=<?php echo '"'.$_SESSION["myForm"]["school"].'"';?>>
 					</div>
 				</div>
 
@@ -102,13 +115,13 @@
 				</div>
 
 				<div class="form-group row">
-					<label for="" class="control-label col-md-1">Stream: </label>
+					<label for="" class="control-label col-md-1">Class: </label>
 					<div class="col-md-2">
-						<label for="maths" class="radio-inline">
-							<input type="radio" value="MATHS" id="maths" name="stream" <?php if($_SESSION["myForm"]["stream"] == "MATHS") echo "checked"?>>Maths
+						<label for="11th" class="radio-inline">
+							<input type="radio" value="11" id="11th" name="class" <?php if($_SESSION["myForm"]["class"] == "11") echo "checked"?>>11th
 						</label>
-						<label for="science" class="radio-inline">
-							<input type="radio" value="SCIENCE" id="science" name="stream" <?php if($_SESSION["myForm"]["stream"] == "SCIENCE") echo "checked"?>>Science
+						<label for="12th" class="radio-inline">
+							<input type="radio" value="12" id="12th" name="class" <?php if($_SESSION["myForm"]["class"] == "12") echo "checked"?>>12th
 						</label>
 					</div>
 					

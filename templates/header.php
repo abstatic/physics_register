@@ -79,7 +79,7 @@
     </head>
 
     <body>
-        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle noDisplay"><i class="fa fa-bars"></i></a>
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -93,13 +93,19 @@
                     <a href="index.php#about"><i class="fa fa-list-alt"></i> About</a>
                 </li>
                 <li>
-                    <a href="index.php#services">Services</a>
+                    <a href="index.php#services"><i class="fa fa-users"></i> Services</a>
                 </li>
                 <li>
-                    <a href="index.php#physics">Physics Simplified</a>
+                    <a href="index.php#physics"><i class="fa fa-cogs"></i> Physics Simplified</a>
                 </li>
                 <li>
                     <a href="index.php#contact"><i class="fa fa-phone"></i> Contact</a>
+                </li>
+                <li>
+                    <a href="form.php"><i class="fa fa-pencil-square-o"></i> Register</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-print"></i> Print Receipt</a>
                 </li>
             </ul>
         </nav>

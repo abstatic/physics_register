@@ -9,13 +9,7 @@
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="form.php" class="btn btn-default btn-lg"><i class="fa fa-pencil"></i> <span class="network-name">Register</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-print fa-fw"></i> <span class="network-name">Print Receipt</span></a>
+                                <a href="form.php" class="btn btn-success btn-lg"><i class="fa fa-pencil-square-o"></i> <span class="network-name">Register</span></a>
                             </li>
                         </ul>
                     </div>
@@ -57,7 +51,7 @@
     </div>
     <!-- /.content-section-a -->
 
-    <div class="content-section-b">
+    <div class="content-section-b" id="services">
 
         <div class="container">
 
@@ -124,7 +118,7 @@
                     <ul class="list-inline banner-social-buttons">
                         <li>
                             <a href="form.php" class="btn btn-success btn-lg">
-                            	<i class="fa fa-pencil"></i> <span class="network-name">Register</span>
+                            	<i class="fa fa-pencil-square-o"></i> <span class="network-name">Register</span>
                             </a>
                         </li>
                     </ul>

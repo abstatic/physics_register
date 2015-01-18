@@ -2,12 +2,11 @@ body {
 	background-color: #F8F8F8;
 }
 
-div#top {
+#top {
 	text-align: center;
 	font-weight: bold;
 	font-size: 35px;
-	margin-top: 50px;
-
+	margin: 25px auto;
 }
 
 div#middle {
@@ -64,4 +63,9 @@ table.education  {
 	border: 1px solid #FF8080;
 	border-radius: 4px;
 	text-align: center;
+}
+
+.table_head {
+	font-family: Sans-Serif;
+	background-color: #fff;
 }

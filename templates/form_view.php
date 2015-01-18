@@ -1,10 +1,11 @@
-<div id="top">
-            <span class="head"><?= isset($title) ? htmlspecialchars($title) : 'Arun Computers' ?></span>
-</div>
-<div class="container-fluid  col-md-12">
+<div class="container-fluid">
+	
+	<div class="row" id="top">
+		<span class="head"><?= isset($title) ? htmlspecialchars($title) : 'Arun Computers' ?></span>
+	</div>
 	<hr>
 	<div class="well row">
-	
+		<div id="error"></div>
 		<form name="admission_form" action="form.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
 			<div class="form-group row">
 				<label for="course" class="control-label col-md-2 col-md-offset-4">Choose The Course</label>
@@ -85,12 +86,25 @@
 							<input type="radio" value="obc" id="obc" name="category"> OBC
 						</label>
 					</div>
+					<label for="" class="control-label col-md-1">Stream: </label>
+					<div class="col-md-2">
+						<label for="maths" class="radio-inline">
+							<input type="radio" value="maths" id="maths" name="stream">Maths
+						</label>
+						<label for="science" class="radio-inline">
+							<input type="radio" value="science" id="science" name="stream">Science
+						</label>
+					</div>
 				</div>
 
 				<div class="form-group row">
 					<label for="add" class="control-label col-md-2">Address:</label>
 					<div class="col-md-6">
-						<textarea name="address" id="add" cols="6" rows="1" class="form-control" placeholder="Enter Your Post Address"></textarea>
+						<textarea name="address" id="add" cols="6" rows="1" class="form-control" placeholder="Enter Your Postal Address"></textarea>
+					</div>
+					<label for="school" class="control-label col-md-2">School:</label>
+					<div class="col-md-2">
+						<input class="form-control" name="school" id="school" type="text" placeholder="Name of your school">
 					</div>
 				</div>
 
@@ -101,13 +115,14 @@
 						<span class="text-warning">Photosize should not exceed 500kb.</span><br>
 						<span class="text-warning">Image Type: jpg</span>
 					</div>
-					<label for="" class="control-label col-md-1">Stream: </label>
+
+					<label for="" class="control-label col-md-1">Class: </label>
 					<div class="col-md-2">
-						<label for="maths" class="radio-inline">
-							<input type="radio" value="maths" id="maths" name="stream">Maths
+						<label for="11th" class="radio-inline">
+							<input type="radio" value="11" id="11th" name="class">11th
 						</label>
-						<label for="science" class="radio-inline">
-							<input type="radio" value="science" id="science" name="stream">Science
+						<label for="12th" class="radio-inline">
+							<input type="radio" value="12" id="12th" name="class">12th
 						</label>
 					</div>
 					
@@ -131,7 +146,7 @@
 				<button type="submit" name="preview" value ="true" class="btn btn-primary btn-lg">Next</button>
 			</div>
 		</form>
-		<div id="error"></div>
+		
 	</div>
 </div>
 <!-- 

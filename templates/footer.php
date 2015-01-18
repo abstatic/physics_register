@@ -1,5 +1,5 @@
     <!-- Footer -->
-    <footer id="footer">
+    <footer id="footer" class="noDisplay">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -107,6 +107,14 @@
 			name: 'marks_10',
 			display: '10th Marks',
 			rules: 'required|greater_than[0]|less_than[100]',
+		},  {
+			name: 'class',
+			display: 'Class',
+			rules: 'required',
+		},  {
+			name: 'school',
+			display: 'School',
+			rules: 'required|max_length[30]'
 		}], function(errors, event) {
 		    if (errors.length > 0) {
 		        // Show the errors
