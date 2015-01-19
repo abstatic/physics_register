@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Sandeep Pandey's Physics Classes</h1>
-                        <h3>Rewa's Best Institute For Physics Coaching</h3>
+                        <h1>Physics Classes</h1>
+                        <h3></h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>

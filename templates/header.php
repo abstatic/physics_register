@@ -13,7 +13,6 @@
 
         <!-- Link all the css -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <link rel="stylesheet" type="text/css" href="css/print.css" media="print" type="text/css" />
@@ -79,33 +78,53 @@
     </head>
 
     <body>
-        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle noDisplay"><i class="fa fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-                <li class="sidebar-brand">
-                    <a href="http://www.aruncomputers.in">Arun Computers</a>
-                </li>
-                <li>
-                    <a href="index.php#home"><i class="fa fa-home"></i> Home</a>
-                </li>
-                <li>
-                    <a href="index.php#about"><i class="fa fa-list-alt"></i> About</a>
-                </li>
-                <li>
-                    <a href="index.php#services"><i class="fa fa-users"></i> Services</a>
-                </li>
-                <li>
-                    <a href="index.php#physics"><i class="fa fa-cogs"></i> Physics Simplified</a>
-                </li>
-                <li>
-                    <a href="index.php#contact"><i class="fa fa-phone"></i> Contact</a>
-                </li>
-                <li>
-                    <a href="form.php"><i class="fa fa-pencil-square-o"></i> Register</a>
-                </li>
-                <li>
-                    <a href="print.php"><i class="fa fa-print"></i> Print Receipt</a>
-                </li>
-            </ul>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top noDisplay" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Arun Computers</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <li>
+                            <a href="index.php#home"><i class="fa fa-home"></i> Home</a>
+                        </li>
+
+                        <li>
+                            <a href="index.php#contact"><i class="fa fa-phone"></i> Contact</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                More <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="index.php#about"><i class="fa fa-list-alt"></i> About</a></li>
+                                <li><a href="index.php#services"><i class="fa fa-users"></i> Services</a></li>
+                                <li><a href="index.php#physics"><i class="fa fa-cogs"></i> Physics Simplified</a></li>
+                                <li><a href="print.php"><i class="fa fa-print"></i> Print Receipt</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <a href="form.php"><i class="fa fa-pencil-square-o"></i> Register</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bell-o"></i> Notices</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
         </nav>
