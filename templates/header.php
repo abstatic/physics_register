@@ -105,7 +105,7 @@
                     <a href="form.php"><i class="fa fa-pencil-square-o"></i> Register</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-print"></i> Print Receipt</a>
+                    <a href="print.php"><i class="fa fa-print"></i> Print Receipt</a>
                 </li>
             </ul>
         </nav>
