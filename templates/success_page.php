@@ -5,7 +5,7 @@
 	<hr>
 	<div class="row">
 		<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
-		<div style="text-align: center;">
+		<div style="text-align: center;" class="text-danger noDisplay">
 		Bring this print receipt to avail discount !
 	</div>
 			<table class="table table-bordered">
@@ -16,6 +16,10 @@
 						</div>
 					</td>
 					<td colspan="3" class="table_head">
+						<span class="text-muted" style="font-weight: normal;" class="noDisplay">
+							Note down the serial number. You can print the receipt using it.
+						</span>
+						<br>
 						Unique Serial Number- <?=$_SESSION["myForm"]["serial"]?>
 					</td>
 				</tr>
@@ -59,7 +63,7 @@
 					<td class="table_head">School</td>
 					<td><?=$_SESSION["myForm"]["school"]?></td>
 					<td class="table_head">10th Marks</td>
-					<td><?=$_SESSION["myForm"]["marks_10"]?></td>
+					<td><?php printf("%.1f", $_SESSION["myForm"]["marks_10"]);?></td>
 				</tr>
 				<tr>
 					<td class="table_head">Address</td>
@@ -76,4 +80,4 @@
 		</div>
 	</div>
 </div>
-<?php session_unset()?>
+<?php session_destroy();?>

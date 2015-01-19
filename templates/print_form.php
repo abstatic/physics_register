@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid wrapper">
 	<div class="row" id="top">
 		<span class="head"><?= isset($title) ? htmlspecialchars($title) : 'Arun Computers' ?></span>
 	</div>
@@ -12,7 +12,7 @@
 						</div>
 			</div>
 			<div style="text-align: center;">
-					<button type="submit" name="preview" value ="true" class="btn btn-primary">Next</button>
+					<button type="submit" name="print" value ="true" class="btn btn-primary">Next</button>
 			</div>
 		</form>
 	</div>
