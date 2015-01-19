@@ -69,3 +69,7 @@ table.education  {
 	font-family: Sans-Serif;
 	background-color: #fff;
 }
+
+.wrapper {
+	min-height: 95%;
+}
