@@ -12,8 +12,8 @@
         <meta name="author"                content="Abhishek Shrivastava" />
 
         <!-- Link all the css -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
         <link rel="stylesheet" type="text/css" href="css/print.css" media="print" type="text/css" />
@@ -39,7 +39,7 @@
 
         <!-- Scripts -->
         <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/jquery-ui.min.js"></script>
 
