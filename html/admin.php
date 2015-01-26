@@ -29,8 +29,11 @@
 
 		// or are we tryinbg to publish a notice
 		elseif (isset($_POST["notice"]) && $_POST["notice"] == true) {
-			echo "notice";
+
+			$past_notice = query("SELECT * FROM notices");
+			render("notice_view.php", ["title" => "Notices", "past_notice" => $past_notice]);
 		}
+
 		// or are we trying to login
 		elseif (isset($_POST["login"]) && $_POST["login"] == true) {
 			// yes we are.
