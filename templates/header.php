@@ -13,10 +13,10 @@
 
         <!-- Link all the css -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="css/print.css" media="print" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
         <link rel="stylesheet" type="text/css" href="css/landing-page.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
      
         <!-- Custom Fonts -->
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -41,7 +41,7 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/jquery-ui.min.js"></script>
-
+        
         <?php /* Initialization in case of registration form */?>
         <?php if (isset($title) && ($title === "Registration Form")): ?>
             <script>
@@ -79,7 +79,7 @@
 
     <body>
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top noDisplay" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top noDisplay" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -89,7 +89,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Arun Computers</a>
+                    <a class="navbar-brand" href="http://www.aruncomputers.in">Arun Computers</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -128,3 +128,11 @@
             </div>
             <!-- /.container -->
         </nav>
+    
+        <?php if ($title != "Arun Computers"): ?>
+
+        <div class="container-fluid wrapper">
+            <div class="row" id="top">
+                <span class="head"><?= isset($title) ? htmlspecialchars($title) : 'Arun Computers' ?></span>
+            </div>
+        <?php endif ?>    

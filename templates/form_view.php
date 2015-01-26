@@ -1,8 +1,4 @@
-<div class="container-fluid">
-	
-	<div class="row" id="top">
-		<span class="head"><?= isset($title) ? htmlspecialchars($title) : 'Arun Computers' ?></span>
-	</div>
+
 	<hr>
 	<div class="well row">
 		<div id="error"></div>
@@ -148,7 +144,3 @@
 		</form>
 		
 	</div>
-</div>
-<!-- 
-	style="border: 1px solid black;"
- -->

@@ -252,8 +252,6 @@
     // get the resource pointer.
     $source = imagecreatefromjpeg($fileName);
 
-    
-    
     // Resize
     imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
 

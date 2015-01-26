@@ -9,7 +9,7 @@
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="form.php" class="btn btn-success btn-lg"><i class="fa fa-pencil-square-o"></i> <span class="network-name">Register</span></a>
+                                <a href="form.php" class="btn btn-primary btn-lg"><i class="fa fa-pencil-square-o"></i> <span class="network-name">Register</span></a>
                             </li>
                         </ul>
                     </div>
@@ -141,7 +141,7 @@
                     </li>
                     <li>
                         <i class="fa fa-globe"></i> 
-                        <strong>Website:</strong> <a href="http:/www.aruncomputers.in" style="color: white;">www.aruncomputers.in</a>
+                        <strong>Website:</strong> <a href="http://www.aruncomputers.in" style="color: white;">www.aruncomputers.in</a>
                     </li>
                     <li>
                         <i class="fa fa-phone"></i> 

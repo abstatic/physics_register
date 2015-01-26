@@ -1,7 +1,4 @@
-<div class="container-fluid">
-	<div class="row" id="top">
-			<span class="head"><?= isset($title) ? htmlspecialchars($title) : 'Arun Computers' ?></span>
-	</div>
+
 	<hr>
 	<div class="row">
 		<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
@@ -79,5 +76,5 @@
 			</table>
 		</div>
 	</div>
-</div>
+
 <?php session_destroy();?>

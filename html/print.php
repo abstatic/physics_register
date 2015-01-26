@@ -3,22 +3,25 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "GET") 
 	{
-		render("print_form.php", ["title"=>"Print your receipt"]);
+		render("print_form.php", ["title" => "Print your receipt"]);
 	}
 	else if (isset($_POST["print"]) && $_POST["print"] == "true")
 	{
-		$srial = htmlspecialchars(trim($_POST["srial"]));
+		if (empty($_POST["srial"]))
+			apologize("Please enter a serial number");
+
+		$srial = htmlspecialchars(trim($_POST["srial"]));	
 		
 		// lets prepare the query
 		$rows = query("SELECT * FROM form WHERE srial = ?", $srial);
 
-		if ($rows == "false")
-			apologize("Wrong ID");
+		if (empty($rows))
+			apologize("Wrong Serial");
 		else
 		{	
 			$student = $rows[0];
 
-			$_SESSION["myForm"]["serial"]      = $student["srial"]     ;   
+			$_SESSION["myForm"]["serial"]     = $student["srial"]     ;   
 			$_SESSION["myForm"]["course"]     = $student["course"]     ; 
 			$_SESSION["myForm"]["f_name"]     = $student["first_name"] ; 
 			$_SESSION["myForm"]["l_name"]     = $student["last_name"]  ; 
