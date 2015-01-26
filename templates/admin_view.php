@@ -1,6 +1,9 @@
 	<div class="row">
 		<form action="admin.php" method="post">
 			<div class="form-group">
+				<div class="col-md-2 pull-pull-left" style="text-align: center;">
+					<button type="submit" name="notice" value="true" class="btn btn-primary btn-lg">Pubish Notice</button>
+				</div>
 				<div class="col-md-1 pull-right" style="text-align: center;">
 					<button type="submit" name="logout" value="true" class="btn btn-primary btn-lg">Logout</button>
 				</div>
