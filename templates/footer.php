@@ -142,5 +142,7 @@
 		});
 	 	</script>
  	<?php endif ?>
+
+ 	<?php //if(isset($)) ?>
     </body>
 </html>

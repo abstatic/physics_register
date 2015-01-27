@@ -27,11 +27,9 @@
 			redirect("admin.php");
 		}
 
-		// or are we tryinbg to publish a notice
+		// or are we trying to notice page
 		elseif (isset($_POST["notice"]) && $_POST["notice"] == true) {
-
-			$past_notice = query("SELECT * FROM notices");
-			render("notice_view.php", ["title" => "Notices", "past_notice" => $past_notice]);
+			redirect("notice.php");
 		}
 
 		// or are we trying to login

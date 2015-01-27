@@ -119,7 +119,7 @@
                             <a href="form.php"><i class="fa fa-pencil-square-o"></i> Register</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bell-o"></i> Notices</a>
+                            <a href="notice.php"><i class="fa fa-bell-o"></i> Notices</a>
                         </li>
                         
                     </ul>
