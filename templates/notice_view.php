@@ -21,9 +21,12 @@
 	<div class="col-md-3 well">
 		<div class="alert alert-warning alert-dismissible fade in" role="alert">
 	      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-	      <em>Instructions: </em>
+	      <em class="text-danger">Instructions: </em> <br>
+	      Write down the notice details. <br>
+	      Select the related tag. <br>
+	      Select the notice date. Click publish.
 	    </div>
-		<form action="notice.php" method="POST">
+		<form action="notice.php" method="POST" name="notice_form" role="form" class="form-horizontal">
 			<fieldset>
  				<div class="form-group">
 					<label for="pubNotice"><h3>Publish a notice</h3></label>
@@ -41,7 +44,7 @@
 					</label>
 				</div>
 				<div class="form-group">
-					<label for="day" class="control-label">Notice Date
+					<label for="" class="control-label">Notice Date
 						<select name="day" id="day" >
 							<option value="" selected>Day</option>
 							<?php foreach ($days as $day): ?>
@@ -64,16 +67,26 @@
 						</select>
 					</label>
 				</div>
+				<div class="form-group">
+					<label for="batch" class="control-label col-md-2">Batch</label>
+					<div class="col-md-4">
+						<input id="batch" name="batch" type="text" class="form-control" placeholder="Batch">
+					</div>
+					
+				</div>
+				<div id="error" style="width: auto;"></div>
 				<div class="pull-right">
 					<button type="submit" name="publish" value="true" class="btn btn-primary">Publish</button>
 				</div>
 			</fieldset>
 		</form>
+		
 	</div>
 	<div class="col-md-9">
 		<table class="table table-hover">
 			<thead>
 				<th>Date</th>
+				<th>Batch</th>
 				<th>Notice</th>
 			</thead>
 			<tbody>
@@ -92,7 +105,8 @@
 
 				?>
 				<tr class="<?=$class?>">
-					<td><?=$instance["date"]?></td>
+					<td class="col-md-2"><?php echo date('D, d, M, Y', strtotime($instance["date"]))?></td>
+					<td class="col-md-1"><?=$instance["batch"]?></td>
 					<td><?=$instance["notice"]?></td>
 				</tr>
 			<?php endforeach ?>

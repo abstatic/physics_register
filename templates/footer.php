@@ -143,6 +143,52 @@
 	 	</script>
  	<?php endif ?>
 
+ 	<?php if(isset($title) && $title === "Notification Panel"): ?>
+		<script src="js/validate.min.js"></script>
+	 	
+	 	<script>
+	 		var error_console = document.getElementById("error");
+
+	 		// Initialize the form validator
+	 		var validator = new FormValidator('notice_form', [{
+			name: 'notice_value',
+			display: 'Notice Detail',
+			rules: 'required'
+		}, {
+			name: 'tag',
+			display: 'Notice tag',
+			rules: 'required'
+		}, {
+			name: 'day',
+			display: 'Day',
+			rules: 'required'
+		}, {
+			name: 'month',
+			display: 'Month',
+			rules: 'required'
+		}, {
+			name: 'year',
+			display: 'Year',
+			rules: 'required'
+		}, {
+			name: 'batch',
+			display: 'Batch',
+			rules: 'required'
+		}], function(errors, event) {
+		    if (errors.length > 0) {
+		        // Show the errors
+		        var errorString = '';
+
+        		for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+            		errorString += (i+1)+'.'+errors[i].message + '<br />';
+        		}
+        		error_console.innerHTML = errorString;
+        		$("#error").slideDown();
+		    }
+		});
+	 	</script>
+ 	<?php endif ?>
+
  	<?php //if(isset($)) ?>
     </body>
 </html>

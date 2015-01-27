@@ -40,10 +40,10 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/scripts.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        
+  
         <?php /* Initialization in case of registration form */?>
         <?php if (isset($title) && ($title === "Registration Form")): ?>
+            <script src="js/jquery-ui.min.js"></script>
             <script>
              $(function() {
                 $( "#datepicker" ).datepicker({
@@ -112,6 +112,7 @@
                                 <li><a href="index.php#services"><i class="fa fa-users"></i> Services</a></li>
                                 <li><a href="index.php#physics"><i class="fa fa-cogs"></i> Physics Simplified</a></li>
                                 <li><a href="print.php"><i class="fa fa-print"></i> Print Receipt</a></li>
+                                <li><a href="admin.php"><i class="fa fa-rocket"></i> Admin Login</a></li>
                             </ul>
                         </li>
                         
